@@ -4,6 +4,8 @@ FROM node:22-bookworm
 RUN curl -fsSL https://bun.sh/install | bash
 ENV PATH="/root/.bun/bin:${PATH}"
 
+
+
 RUN corepack enable
 
 WORKDIR /app

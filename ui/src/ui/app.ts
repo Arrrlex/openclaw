@@ -105,7 +105,7 @@ function resolveOnboardingMode(): boolean {
 @customElement("openclaw-app")
 export class OpenClawApp extends LitElement {
   @state() settings: UiSettings = loadSettings();
-  @state() password = "";
+  @state() password = this.settings.password ?? "";
   @state() tab: Tab = "chat";
   @state() onboarding = resolveOnboardingMode();
   @state() connected = false;
